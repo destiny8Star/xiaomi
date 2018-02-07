@@ -82,14 +82,27 @@
 	float: right;
 	margin-top: 25px;
 }
-.seap{
-	font-family: 'iconfont';
+.search input{
+	width: 242px;
+	height: 48px;
+	border: none;
+}
+.seap {
+
 	width: 47px;
 	height: 48px;
 	border-left: 1px solid #e0e0e0;
 	float: right;
+ 
+}
+.seap input{
+	font-family: 'iconfont';
 	font-size:18px;
-    line-height: 48px;
+	border: none;
+	width: 47px;
+	height: 48px;
+	background-color: transparent;
+	   line-height: 48px;
     text-align: center;
 }
 .star{
@@ -252,6 +265,12 @@ line-height: 58px;
 	background-color: white;
 	position: relative;
 	overflow: hidden;
+}
+.zhibo_s:hover,.zhibo_x:hover,.p1:hover,.neirong1:hover,.view_item:hover {
+    box-shadow: 0 10px 20px 5px black;
+}
+.zhibo_s:hover,.zhibo_x:hover,.p1:hover,.neirong1:hover,.view_item:hover{
+	transform: translateY(-5px);
 }
 .zhibo_s img{
 	width: 150px;
@@ -851,7 +870,7 @@ line-height: 58px;
 
 }
 
-.view_item span:hover{
+.view_item:hover>span{
 	color: #ff6700;
 	cursor: pointer;
 }
@@ -911,9 +930,7 @@ line-height: 58px;
 .banleft_top{
 	width: 234px;
 	height: 82px;
-
 	margin: 3px 1px 0;
-
 }
 .banleft_top1{
 	width: 76px;
@@ -1174,9 +1191,10 @@ line-height: 58px;
 	background-color: #ff6700;
 	position: absolute;
 	left: 0px;
-    bottom: -80px;
-	transition: bottom 0.2s linear,opacity 0.2s linear;    /* all  1s linear; */
+    bottom:-80px;
+    transition: bottom 0.2s linear,opacity 0.2s linear;    /* all  1s linear; */
 	opacity: 0;
+	
 }
 
 .zhibo_s:hover .zhineng_tan{
