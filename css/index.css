@@ -272,6 +272,10 @@ line-height: 58px;
 .zhibo_s:hover,.zhibo_x:hover,.p1:hover,.neirong1:hover,.view_item:hover{
 	transform: translateY(-5px);
 }
+.view_item,.zhibo_s,.zhibo_x,.p1,.neirong1{
+	transition: transform 1s;
+
+}
 .zhibo_s img{
 	width: 150px;
 	height: 150px;
