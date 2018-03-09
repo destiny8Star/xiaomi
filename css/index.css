@@ -109,6 +109,8 @@
 	width: 1226px;
 	height: 398px;
 	margin: 0 auto;
+	overflow: hidden;
+
 }
 .star_top{
 	width: 100%;
@@ -139,15 +141,22 @@
 }
 .star_btn1{
 	border-right: 1px solid #e0e0e0;
-	cursor: pointer;
-	color: #b0b0b0;
 }
-.start_bt2{
+ .star_btn1:hover,.start_bt2:hover{
+	cursor: pointer;
+	color: #ff6700;
+}
+
+ .star_btn .disable{
+	color:#e0e0e0;
+}
+.disable:hover{
 	color: #e0e0e0;
 }
 
 .star_bottom{
-	width: 1226px;
+	/* width: 1226px; */
+	width: 3500px;
 	height: 340px;
 	float: left;
 }
@@ -348,6 +357,7 @@ line-height: 58px;
 	width: 1226px;
 	height: 696px;
 	margin: 0 auto;
+	position: relative;
 }
 .dapeitop{
     padding-top: 22px;
@@ -370,18 +380,29 @@ line-height: 58px;
 .dapei_wenzi{
 	font-size: 18px;
 	float: left;
-	padding-right: 30px;
+	/* padding-right: 30px; */
+	margin-right: 30px;
+	cursor: pointer;
+}
+.active{
+	 border-bottom: 2px solid red;
+      color: red; 
 }
 .dapei_wenzit{
-	font-size:18px;
 	float: right;
-    border-bottom: 2px solid red;
-    color: red;
+	margin: 0;
+   
 }
 .dabo{
 	width: 1226px;
 	height: 614px;
 	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.active2{
+	z-index: 9;
 }
 .dabo_t{
 	width: 1226px;
@@ -703,7 +724,7 @@ line-height: 58px;
 	float: left;
 	margin-right: 14px;
 	background-color: #fff;
-
+    position: relative;
 }
 .reping_bottom{
 
@@ -767,7 +788,10 @@ line-height: 58px;
 	margin-right: 14px;
 	background-color: #fff;
 	border-top: 1px solid #e53935;
+	overflow: hidden;
+	
 }
+
 .neirong_bottom h1{
 	width: 240px;
 	height: 20px;
@@ -786,6 +810,53 @@ line-height: 58px;
 	color: #333;
 
 }
+.neirong1box{
+	width: 900px;
+	height: 296px;
+}
+.neirong1p{
+	width: 296px;
+	float: left;
+}
+.neirong_btn1 {
+	width: 20px;
+	height: 48px;
+	font-size: 18px;
+	position: absolute;
+	top:184px;
+	left: 0;
+	background-color: #b0b0b0;
+	line-height: 48px;
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	transition: all 1s;
+	cursor: pointer;
+}
+.neirong_btn2{
+	width: 20px;
+	height: 48px;
+	font-size: 18px;
+	position: absolute;
+	top:184px;
+	right: 0;
+	background-color: #b0b0b0;
+	line-height: 48px;
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	transition: all 1s;
+	cursor: pointer;
+
+}
+
+.neirong1:hover>.neirong_btn1,.neirong1:hover>.neirong_btn2{
+	opacity: .5;
+}
+.neirong_btn1:hover,.neirong_btn2:hover{
+	/* opacity: 1; */
+	background-color: #000;
+}
 .neirong2{
 	border-top: 1px solid #83c44e;
 }
@@ -798,7 +869,8 @@ line-height: 58px;
 	font-size: 12px;
 	text-align: center;
 	margin-left: 44px;
-	margin-top: 53px;
+	margin-top: 13px;
+	float: left;
 	color: #b0b0b0;
 }
 .neirong3{
@@ -1121,12 +1193,18 @@ line-height: 58px;
 	height: 460px;
 	position: relative;
 }
-.banner_img img{
+.banner_img li{
     width: 1226px;
 	height: 460px;
 	position: absolute;
 	left: 0px;
 	top: 0;
+	opacity: 0.5;
+	transition: all 1s ;
+}
+.banner_img li.active{
+	z-index: 9;
+	opacity: 1;
 }
 .banner_nav{
 	width: 234px;
@@ -1136,6 +1214,8 @@ line-height: 58px;
 	left: 0;
 	top: 0;
 	padding: 20px 0;
+	z-index: 99;
+
 }
 .banner_nav li{
 	width: 174px;
@@ -1159,7 +1239,32 @@ line-height: 58px;
 	top: 0;
 	bottom: 0;
 	margin: auto;
+	z-index: 99;
 }
+.banner_dian{
+	 width: 150px;
+      height: 10px;
+      position: absolute;
+      bottom:30px;
+      right:20px;
+      z-index: 999;
+}
+.banner_dian li{
+     width: 6px;
+     height: 6px;
+      margin:0 5px;
+      float:left;
+     background: white;
+      border-radius: 50%;
+      border:2px solid #000;
+      cursor: pointer;
+  }
+  .banner_dian li.active{
+       background-color: #ff6700;
+  }
+  .banner_dian li:hover{
+  	background-color: #ff6700;
+  }
 .banner_lbtn{
 	left: 234px;
 }
@@ -1241,10 +1346,7 @@ line-height: 58px;
 	cursor: pointer;
 	color: #fff;
 }
-.star_btn1:hover{
-	cursor: pointer;
-	color: #ff6700;
-}
+
 .zhineng_right:hover{
 	cursor: pointer;
 	color: #ff6700;
