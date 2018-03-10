@@ -120,30 +120,69 @@
     const neirong_btn1=document.querySelector(".neirong_btn1");
     const neirong_btn2=document.querySelector(".neirong_btn2");
     const neirong1box=document.querySelector(".neirong1box");
+    const neirong_dian=document.querySelectorAll(".neirong_dian");
+    const neirong1p=document.querySelectorAll(".neirong1p");
      let n=0;
      neirong_btn2.onclick=function(){
          n++;
-         // star_btn1.classList.remove("disable");
-         // if(n===2){
-         //    star_btn2.classList.add("disable");
-         // }
-         if(n===3){
-            n=2;
+         if(n===neirong1p.length){
+            n=neirong1p.length-1;
             return;
          }
         neirong1box.style.marginLeft=-296*n+"px";
+        neirong_dian[n].classList.add("diante");
+        neirong_dian[n-1].classList.remove("diante");
+        obj=neirong_dian[n];
   }
   neirong_btn1.onclick=function(){
        n--;
-       // star_btn2.classList.remove("disable");
-       // if(n===0){
-       //  star_btn1.classList.add("disable");
-       // }
        if (n==-1) {
         n=0;
         return;
        }
+        neirong_dian[n].classList.add("diante");
+        neirong_dian[n+1].classList.remove("diante");
         neirong1box.style.marginLeft=-296*n+"px";
-}
+        obj=neirong_dian[n];
+    }
+      let obj=neirong_dian[0];
+      neirong_dian.forEach(function(ele,index){
+        ele.onclick=function(){
+            obj.classList.remove("diante");
+            this.classList.add("diante");
+            obj=ele;
+             neirong1box.style.marginLeft=index*-296+"px";
+             n=index;
+        }
+      })
   }
+  //banner
+  {let li=document.querySelectorAll(".banner_nav li");
+  let side=document.querySelectorAll(".banner_nav_side");
+  li.forEach(function(ele,index){
+    ele.onmouseenter=function(){
+          side[index].style.display="block";
+    }
+    ele.onmouseleave=function(){
+        side[index].style.display="none";
+    }
+  })
 
+}
+  {let nav=document.querySelectorAll(".nav_xiao");
+  let box=document.querySelectorAll(".nav_bot");
+  let dabox=document.querySelector(".nav_botbox");
+  nav.forEach(function(ele,index){
+    ele.onmouseenter=function(){
+        dabox.style.height="300px";
+          box[index].style.display="block";
+           box[index].style.opacity=1;
+    }
+    ele.onmouseleave=function(){
+        box[index].style.display="none";   
+        dabox.style.height="0px";
+
+    }
+  })
+
+}
