@@ -101,10 +101,10 @@
    dapei_wenzi.forEach(function(ele,index){
      ele.onmouseenter=function(){
             for(let i=0;i<dapei_wenzi.length;i++){
-                dapei_wenzi[i].classList.remove("active");
+                dapei_wenzi[i].classList.remove("activedapei");
                 dabo[i].classList.remove("active2");
             }
-                dapei_wenzi[index].classList.add("active");
+                dapei_wenzi[index].classList.add("activedapei");
                dabo[index].classList.add("active2");
      }
    })
@@ -134,6 +134,7 @@
         neirong_dian[n-1].classList.remove("diante");
         obj=neirong_dian[n];
   }
+
   neirong_btn1.onclick=function(){
        n--;
        if (n==-1) {
@@ -175,13 +176,16 @@
   nav.forEach(function(ele,index){
     ele.onmouseenter=function(){
         dabox.style.height="300px";
+        dabox.style.borderTop="1px solid #ccc";
+
           box[index].style.display="block";
-           box[index].style.opacity=1;
+           // box[index].style.opacity=1;
     }
     ele.onmouseleave=function(){
         box[index].style.display="none";   
         dabox.style.height="0px";
-
+        dabox.style.border=" 0";
+        
     }
   })
 
