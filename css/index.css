@@ -78,8 +78,39 @@
 	color: red;
 	z-index: 999;
 	display: none;
-	background-color: pink;
+	background-color: #fff;
 	/* transition: all 1s;	 */
+}
+.nav_bot li{
+	width: 180px;
+	/*height: 229px;*/
+	float: left;
+	padding: 20px 12px;
+	text-align: center;
+	position: relative;
+}
+.nav_bot img{
+	width: 150px;
+	height: 150px;
+}
+.shangpin_name{
+	font-size: 12px;
+}
+.ming{
+	line-height: 20px;
+	color: #333;
+}
+.price{
+	line-height: 20px;
+	color: #FF6700;
+}
+.nav_fenge{
+	width: 1px;
+	height: 110px;
+	position: absolute;
+	top: 35px;
+	right: 0px;
+	background-color: #e0e0e0;
 }
 
 .nav_logo{
@@ -189,6 +220,7 @@
 	width: 3500px;
 	height: 340px;
 	float: left;
+	transition: all 1s; 
 }
 .star_item{
 	width: 234px;
@@ -1273,17 +1305,6 @@ line-height: 58px;
 	padding: 20px 0;
 	z-index: 100;
 }
-.banner_nav_side{
-	width: 700px;
-	height: 100%;
-	background: red;
-	position: absolute;
-	top: 0;
-	left: 234px;
-	font-size: 50px;
-	color: #fff;
-	display: none;
-}
 .banner_nav li{
 	width: 174px;
 	height: 42px;
@@ -1292,6 +1313,50 @@ line-height: 58px;
 	font-size: 14px;
 	padding: 0 30px;
 }
+.banner_nav_side{
+	width: 755px;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 234px;
+	font-size: 50px;
+	color: #fff;
+	display: none;
+}
+.banner_yul{
+	width: 248px;
+	height: 459px;
+	float: left;
+	border-top:  1px solid #e0e0e0;
+	background-color: #fff;
+}
+.banner_yulbox{
+	float: left;
+	width: 201px;
+	height: 76px;
+	padding: 0 21px;
+	/*padding:0 25px;*/
+	background-color: #fff;
+}
+.banneryimg{
+	width: 50px;
+	height: 50px;
+	margin-top: 13px;
+	margin-right: 10px;
+	float: left;
+}
+.banner_yulbox img{
+	width: 50px;
+	height: 50px;
+}
+.banner_yulbox span{
+	font-size: 14px;
+	line-height: 76px;
+	color: #333;
+
+}
+
 .banner_pic{
 	float: right;
 }
